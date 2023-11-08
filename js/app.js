@@ -43,3 +43,38 @@ btn.addEventListener("click", async function () {
     getUser();
     input.value = ""
 });
+
+
+// Dark mode
+
+const themeBtn = document.querySelector(".theme");
+const themeStatus = document.querySelector(".theme-status");
+
+
+themeBtn.addEventListener("click" , ()=>{
+ document.documentElement.classList.toggle("dark")
+ if(document.documentElement.classList.contains("dark")){
+    themeBtn.src = "/images/sun.png"
+    themeStatus.innerHTML = "Light"
+ }else {
+    themeBtn.src = "/images/moon.png"
+    themeStatus.innerHTML = "Dark"
+ }
+ localStorage.setItem("theme" , document.documentElement.classList)
+})
+
+
+window.addEventListener("load", () => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      document.documentElement.classList.add("dark");
+      themeBtn.src = "/images/sun.png";
+      themeStatus.innerHTML = "Light";
+    } else {
+      // Default to light theme if there's no theme preference in localStorage
+      document.documentElement.classList.remove("dark");
+      themeBtn.src = "/images/moon.png";
+      themeStatus.innerHTML = "Dark";
+    }
+  });
+  

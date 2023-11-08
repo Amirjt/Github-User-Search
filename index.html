@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dist/output.css">
     <title>Github User Search</title>
 </head>
-<body class="bg-slate-100 h-screen flex justify-center items-center p-5">
-    <div class="main bg-white p-7 rounded-xl shadow-xl w-[800px] h-[500px] flex flex-col gap-6">
+<body class="bg-slate-100  h-screen flex justify-center items-center p-5 dark:bg-slate-800">
+    <div class="main bg-white dark:bg-slate-700 dark:text-white p-7 rounded-xl shadow-xl w-[800px] h-[500px] flex flex-col gap-6">
         <div class="top flex justify-between items-center">
             <h2>Github User Search</h2>
             <div class="flex justify-between items-center gap-2 cursor-pointer">
-            <span>Dark</span>
-            <img src="/images/moon.png" width="30" alt="">
+            <span class="theme-status">Dark</span>
+            <img src="/images/moon.png" class="theme" width="30" alt="">
             </div>
         </div>
         <div class="search flex gap-2">
-            <input type="" class="w-full p-2 outline-none border border-gray-300 rounded-xl placeholder:text-sm" id="search-input" placeholder="Search Github User">
+            <input type="" class="w-full p-2 outline-none border border-gray-300 rounded-xl placeholder:text-sm dark:bg-transparent" id="search-input" placeholder="Search Github User">
             <button id="btn" class="bg-blue-500 text-white text-sm p-2 rounded-xl">Search</button>
         </div>
         <div class="content hidden items-center h-full justify-between">
@@ -24,15 +24,15 @@
           <div class="user flex flex-col w-1/2 gap-4">
             <div class="top flex justify-between items-center">
                 <span class="name text-xl">Amir jt</span>
-                <span class="joined text-[12px] text-gray-600">Joined 2020-07-08</span>
+                <span class="joined text-[12px] text-gray-600 dark:text-gray-400">Joined 2020-07-08</span>
             </div>
             <div>
                 <span class="username text-blue-500" >@amirjt</span>
             </div>
             <div>
-                <span class="bio text-[14px] text-gray-600">This profile has no bio...</span>
+                <span class="bio text-[14px] text-gray-600 dark:text-gray-400">This profile has no bio...</span>
             </div>
-            <div class="userinfo bg-gray-200 p-4 rounded-xl shadow-xl flex justify-between items-center text-sm">
+            <div class="userinfo bg-gray-200 dark:bg-slate-600 p-4 rounded-xl shadow-xl flex justify-between items-center text-sm">
                <div class="flex flex-col justify-center items-center gap-2">
                 Repos
                 <span class="repos">13</span>
